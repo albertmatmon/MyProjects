@@ -17,7 +17,7 @@ public class git {
         int dni;
         System.out.print("Write numbers of your DNI ");
         dni = keyboard.nextInt();
-        letter = DNIletter(dni);
+        letter = DNIlet(dni);
         System.out.println("Your DNI is: "+dni+""+letter);
 
     }
@@ -30,6 +30,10 @@ public class git {
         letter =letra[let];
 
         return letter;
+    }
+    private static char DNIlet(int dni){
+         return "TRWAGMYFPDXBNJZSQVHLCKE".charAt(dni % 23);
+        
     }
 
 }
